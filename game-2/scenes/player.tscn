@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bg8k010xrcs2x"]
 
 [ext_resource type="Texture2D" uid="uid://cfvdmhfhkcpt6" path="res://assets/images/player/Attack.png" id="1_q6r6c"]
+[ext_resource type="Script" uid="uid://es6hr1x2m27x" path="res://scenes/scripts/player.gd" id="1_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://bht70s7x32wpw" path="res://assets/images/player/Dead.png" id="2_kdubu"]
 [ext_resource type="Texture2D" uid="uid://n54g80ybiuas" path="res://assets/images/player/Idle.png" id="3_d21ai"]
 [ext_resource type="Texture2D" uid="uid://bf1tfpbs0s454" path="res://assets/images/player/Jump.png" id="4_rj586"]
@@ -529,8 +530,9 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=1413294774]
+script = ExtResource("1_tuyoq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=986653084]
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_lyuya")
-animation = &"attak_up"
-frame_progress = 0.30685943
+animation = &"idle_right"
