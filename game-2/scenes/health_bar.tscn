@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://caa34j1fwchih"]
+
+[ext_resource type="Script" uid="uid://bw37rddu6onhy" path="res://scenes/scripts/health_bar.gd" id="1_6opq1"]
+[ext_resource type="Texture2D" uid="uid://ddsf6o7jcl7y" path="res://assets/images/UI/LifeBarMiniUnder.png" id="1_y3kqx"]
+[ext_resource type="Texture2D" uid="uid://c5f7tei2lsj4c" path="res://assets/images/UI/LifeBarMiniProgress.png" id="2_6opq1"]
+
+[node name="healthBar" type="Node2D" unique_id=99745942]
+script = ExtResource("1_6opq1")
+
+[node name="healthUnder" type="Sprite2D" parent="." unique_id=738966871]
+texture = ExtResource("1_y3kqx")
+centered = false
+
+[node name="health" type="Sprite2D" parent="." unique_id=1802360934]
+texture = ExtResource("2_6opq1")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 4)

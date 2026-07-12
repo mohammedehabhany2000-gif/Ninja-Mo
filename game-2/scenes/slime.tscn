@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ckq4yngyjhynd" path="res://assets/images/slime enemy/Slime_Green.png" id="1_057e2"]
 [ext_resource type="Script" uid="uid://ea1pheg0oegc" path="res://scenes/scripts/slime.gd" id="1_p2gj0"]
+[ext_resource type="AudioStream" uid="uid://d1m1byihbptc3" path="res://assets/sounds/slime/takedamage.wav" id="3_n6pvg"]
+[ext_resource type="PackedScene" uid="uid://caa34j1fwchih" path="res://scenes/health_bar.tscn" id="4_pjw23"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30a25"]
 atlas = ExtResource("1_057e2")
@@ -139,7 +141,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_reiu7")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 8.0
 }, {
@@ -175,18 +177,25 @@ script = ExtResource("1_p2gj0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=715281581]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7hyag")
-animation = &"idle"
+animation = &"die"
 autoplay = "idle"
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=26640559]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_057e2")
 
-[node name="syte" type="Area2D" parent="." unique_id=180839101]
+[node name="sight" type="Area2D" parent="." unique_id=180839101]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="syte" unique_id=1680941377]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sight" unique_id=1680941377]
 shape = SubResource("CircleShape2D_371uh")
 
-[connection signal="body_entered" from="syte" to="." method="_on_syte_body_entered"]
-[connection signal="body_exited" from="syte" to="." method="_on_syte_body_exited"]
+[node name="takedamage" type="AudioStreamPlayer2D" parent="." unique_id=770529367]
+stream = ExtResource("3_n6pvg")
+pitch_scale = 0.75
+
+[node name="healthBar" parent="." unique_id=99745942 instance=ExtResource("4_pjw23")]
+position = Vector2(-15, 15)
+scale = Vector2(1.7, 1.7)
+
+[connection signal="body_entered" from="sight" to="." method="_on_syte_body_entered"]
+[connection signal="body_exited" from="sight" to="." method="_on_syte_body_exited"]

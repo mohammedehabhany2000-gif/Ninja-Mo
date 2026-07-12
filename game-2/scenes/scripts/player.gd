@@ -5,13 +5,14 @@ const SPEED = 300.0
 var last_direction: Vector2 = Vector2.RIGHT
 var is_attaking: bool = false
 var hitbox_offset: Vector2
-
+var strength: int =20
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var katana_sound: AudioStreamPlayer2D = $katana_sound
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var katana: AnimatedSprite2D = $weaponpivot/katana
 @onready var hitbox: Area2D = $hitbox
+
 
 
 func _ready() -> void:
@@ -98,5 +99,4 @@ func _on_player_animation_finished() -> void:
 
 func _on_hitbox_body_entered(body: CharacterBody2D) -> void:
 	if is_attaking and body.name == 'slime':
-		print(body.name)
-		print("hit")
+		body.take_damage(strength, position)
