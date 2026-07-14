@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED:int = 110
+const SPEED:int = 120
 const Knockback_Force: int = 100
 
 

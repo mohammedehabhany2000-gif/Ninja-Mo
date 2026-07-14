@@ -8,8 +8,8 @@ var hitbox_offset: Vector2
 var strength: int =20
 var knockback_velocity: Vector2 =Vector2.ZERO
 var min_x: float =150
-var max_x: float =3660
-var min_y: float = 150
+var max_x: float =3540
+var min_y: float = 170
 
 var max_y:float = 1280
 

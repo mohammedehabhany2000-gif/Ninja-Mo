@@ -667,7 +667,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7pv"]
-size = Vector2(67.5, 35)
+size = Vector2(67.5, 63)
 
 [sub_resource type="Animation" id="Animation_ujl30"]
 length = 0.001
@@ -1021,7 +1021,7 @@ frame = 3
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=9917425]
-position = Vector2(2.25, 16.5)
+position = Vector2(2.25, 2.5)
 shape = SubResource("RectangleShape2D_ur7pv")
 
 [node name="katana_sound" type="AudioStreamPlayer2D" parent="." unique_id=996043946]
