@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="zombie-moto/photos/banner.jpeg" alt="Zombie Moto Banner" width="100%">
+  <img src="Ninja Mo/Ninja Mo.jpeg" width="100%">
 </p>
 
 <h1 align="center"> Ninja Mo </h1>
