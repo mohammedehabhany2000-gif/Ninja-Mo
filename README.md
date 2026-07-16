@@ -20,6 +20,9 @@
 | Space | (Attak Enemies) |
 
 ---
+* **Note: Don't kill enemies and move at the same time because you won't be able to damage them, and you will die faster.**
+
+---
 ## The used programs to make the Game:
 * **Godot Engine 4**: To make the game
 * **Audacity**: To edit the soundeffects
